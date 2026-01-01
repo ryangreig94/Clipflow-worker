@@ -1,0 +1,17 @@
+{
+  "name": "clipflow-render-worker",
+  "version": "1.0.0",
+  "description": "FFmpeg render worker for ClipFlow",
+  "main": "render-worker.js",
+  "scripts": {
+    "start": "node render-worker.js",
+    "dev": "node render-worker.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "dotenv": "^17.2.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
