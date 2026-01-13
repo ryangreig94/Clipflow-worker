@@ -1,15 +1,22 @@
 {
-  "name": "clipflow-render-worker",
+  "name": "clipflow-workers",
   "version": "1.0.0",
-  "description": "FFmpeg render worker for ClipFlow",
-  "main": "render-worker.js",
+  "description": "ClipFlow background workers for Railway/Fly.io",
+  "type": "module",
   "scripts": {
-    "start": "node render-worker.js",
-    "dev": "node render-worker.js"
+    "discover": "tsx discover-worker/index.ts",
+    "render": "tsx render-worker/index.ts",
+    "worker": "tsx discover-worker/index.ts",
+    "worker:discover": "tsx discover-worker/index.ts",
+    "worker:render": "tsx render-worker/index.ts",
+    "build": "tsc"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.45.0",
-    "dotenv": "^17.2.3"
+    "@supabase/supabase-js": "^2.45.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
   },
   "engines": {
     "node": ">=18.0.0"
